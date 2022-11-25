@@ -1,0 +1,75 @@
+
+/* from title to comments/contributions */
+
+/* main container */
+.main-container{
+  width: 100%;
+  min-height: 100vh;
+  color: rgb(36, 38, 39);
+  padding: 0 50px;
+}
+
+/* title container */
+.details-title-container{
+  width: 100%;
+  text-align: center;
+}
+
+.details-title,
+.contribution-title{
+  letter-spacing: 2px;
+  word-spacing: 1px;
+  line-height: 2.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 20px 0;
+  text-transform: capitalize;
+}
+
+.details-video{
+  background-color: brown;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.details-video video{
+  background-color: aliceblue;
+}
+
+/* article-form-contribution-container */
+.article-form-contribution-container{
+  width: 100%;
+  position: relative;
+}
+
+.article-form-container{
+  width: 70%;
+  background-color: rgba(111, 26, 7, 0.122);
+  padding: 20px;
+}
+
+.article{
+  font-family: sans-serif;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  font-weight: 300;
+  line-height: 3.3rem;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 750px) {
+  .details-video{
+    width: 100%;
+  }
+  .article-form-container{
+    width: 85%;
+  }
+  .article{
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    line-height: 3rem;
+  }
+}

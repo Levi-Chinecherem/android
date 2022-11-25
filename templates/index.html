@@ -1,0 +1,213 @@
+
+{% extends 'base.html'%}
+{% load static %}
+{% block main %}  
+    <div id="hero">
+        <div class="container">
+            <div class="row">
+                    <div class="six columns">
+                        <div class="hero-content">
+                                <h2>Un_Learn <br>Learn Something Today</h2>
+                                <p>Special Offer, any course in the world</p>
+                                <form action="#" id="search" class="form">
+                                    Learn from anywhere in the world from your android phone
+                                </form>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-bar">
+        <div class="container">
+            <div class="row">
+                    <div class="four columns icon icon1">
+                        <p>Hundreds of online courses <br>
+                        Learn new skills</p>
+                    </div>
+                    <div class="four columns icon icon2">
+                        <p> Our Instructors are Experts<br>
+                        Learn at your own pace</p>
+                    </div>
+                    <div class="four columns icon icon3">
+                        <p>Lifetime access  to courses<br>
+                        Instructors available for chats</p>
+                    </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="courses-list" class="container">
+        <h1 id="heading" class="heading">Online Courses</h1>
+        <div class="row">
+            {% if videos %}
+            {% for video in videos %}
+                <div class="four spread columns">
+                    <div class="card">
+                        <img src="{{ video.thumbnail.url }}" class="course-image u-full-width">
+                        <div class="info-card">
+                            <h4>{{ video.category }}</h4>
+                            <p> {{ video.title }} </p>
+                            <a href="/courses/{{ video.title }}" class="u-full-width button-primary button input add-to-cart" data-id="1">Go To Class</a>
+                        </div>
+                    </div> <!--.card-->
+                </div>
+            {% endfor %}
+            {% else %}
+                <div class="four columns">
+                    <div class="card">
+                        <img src="{% static 'img/course1.jpg' %}" class="course-image u-full-width">
+                        <div class="info-card">
+                            <h4>HTML5, CSS3, JS for beginners</h4>
+                            <p> A.B.Teachgood </p>
+                            <img src="{% static 'img/stars.png' %}">
+                            <p class="price">Sh200  <span class="u-pull-right ">Sh100</span></p>
+                            <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="1">Add to Cart</a>
+                        </div>
+                    </div> <!--.card-->
+                </div>
+                <div class="four columns">
+                        <div class="card">
+                            <img src="{% static 'img/course2.jpg' %}" class="course-image u-full-width">
+                            <div class="info-card">
+                                <h4>Cooking Course</h4>
+                                <p>Top Chef</p>
+                                <img src="{% static 'img/stars.png' %}">
+                                <p class="price">Sh200  <span class="u-pull-right ">Sh100</span></p>
+                                <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="2">Add to Cart</a>
+                            </div>
+                        </div>
+                </div>
+                <div class="four columns">
+                        <div class="card">
+                            <img src="{% static 'img/course3.jpg' %}" class="course-image u-full-width">
+                            <div class="info-card">
+                                <h4>Guitars</h4>
+                                <p>Jimi Hendrix</p>
+                                <img src="{% static 'img/stars.png' %}">
+                                <p class="price">Sh200  <span class="u-pull-right ">Sh100</span></p>
+                                <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="3">Add to Cart</a>
+                            </div>
+                        </div> <!--.card-->
+                </div>
+
+            </div> <!--.row-->
+            <div class="row">
+                <div class="four columns">
+                    <div class="card">
+                        <img src="{% static 'img/course4.jpg' %}" class="course-image u-full-width">
+                        <div class="info-card">
+                            <h4>Gardening</h4>
+                            <p> Violet Rose </p>
+                            <img src="{% static 'img/stars.png' %}">
+                            <p class="price">Sh200  <span class="u-pull-right ">Sh100</span></p>
+                            <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="4">Add to Cart</a>
+                        </div>
+                    </div> <!--.card-->
+                </div>
+                <div class="four columns">
+                        <div class="card">
+                            <img src="{% static 'img/course5.jpg' %}" class="course-image u-full-width">
+                            <div class="info-card">
+                                <h4>Home Decor </h4>
+                                <p>Stepford Wife</p>
+                                <img src="{% static 'img/stars.png' %}">
+                                <p class="price">Sh200  <span class="u-pull-right ">Sh100</span></p>
+                                <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="5">Add to Cart</a>
+                            </div>
+                        </div> <!--.card-->
+                </div>
+                <div class="four columns">
+                        <div class="card">
+                            <img src="{% static 'img/course1.jpg' %}" class="course-image u-full-width">
+                            <div class="info-card">
+                                <h4>Web Design</h4>
+                                <p>Spiderman</p>
+                                <img src="{% static 'img/stars.png' %}">
+                                <p class="price">Sh200  <span class="u-pull-right ">Sh100</span></p>
+                                <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="6">Add to Cart</a>
+                            </div>
+                        </div> <!--.card-->
+                </div>
+            </div> <!--.row-->
+            <div class="row">
+                <div class="four columns">
+                    <div class="card">
+                        <img src="img/course2.jpg" class="course-image u-full-width">
+                        <div class="info-card">
+                            <h4>Learn to cook</h4>
+                            <p>Chief Chef</p>
+                            <img src="img/stars.png">
+                            <p class="price">Sh200  <span class="u-pull-right ">Sh100</span></p>
+                            <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="7">Add to Cart</a>
+                        </div>
+                    </div> <!--.card-->
+                </div>
+                <div class="four columns">
+                        <div class="card">
+                            <img src="img/course3.jpg" class="course-image u-full-width">
+                            <div class="info-card">
+                                <h4>Making Music</h4>
+                                <p> Swiss Beats </p>
+                                <img src="img/stars.png">
+                                <p class="price">Sh200  <span class="u-pull-right ">Sh100</span></p>
+                                <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="8">Add to Cart</a>
+                            </div>
+                        </div> <!--.card-->
+                </div>
+                <div class="four columns">
+                        <div class="card">
+                            <img src="img/course4.jpg" class="course-image u-full-width">
+                            <div class="info-card">
+                                <h4>Growing Fruits and Veges</h4>
+                                <p> Michelle Obama</p>
+                                <img src="img/stars.png">
+                                <p class="price">Sh200  <span class="u-pull-right ">Sh100
+                                </span></p>
+                                <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="9">Add to Cart</a>
+                            </div>
+                        </div> <!--.card-->
+                </div>
+            </div> <!--.row-->
+            <div class="row">
+                    <div class="four columns">
+                        <div class="card">
+                            <img src="img/course5.jpg" class="course-image u-full-width">
+                            <div class="info-card">
+                                <h4>Baking</h4>
+                                <p>Baker Mayfield</p>
+                                <img src="img/stars.png">
+                                <p class="price">Sh200  <span class="u-pull-right ">Sh100</span></p>
+                                <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="10">Add to Cart</a>
+                            </div>
+                        </div> <!--.card-->
+                    </div>
+                    <div class="four columns">
+                            <div class="card">
+                                <img src="img/course1.jpg" class="course-image u-full-width">
+                                <div class="info-card">
+                                    <h4> JavaScript</h4>
+                                    <p>Waga Odongo</p>
+                                    <img src="img/stars.png">
+                                    <p class="price">Sh200  <span class="u-pull-right ">Sh100</span></p>
+                                    <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="11">Add to Cart</a>
+                                </div>
+                            </div> <!--.card-->
+                    </div>
+                    <div class="four columns">
+                            <div class="card">
+                                <img src="img/course2.jpg" class="course-image u-full-width">
+                                <div class="info-card">
+                                    <h4> Natural recipes</h4>
+                                    <p> Bear Grylls</p>
+                                    <img src="img/stars.png">
+                                    <p class="price">Sh200  <span class="u-pull-right ">Sh100</span></p>
+                                    <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="12">Add to Cart</a>
+                                </div>
+                            </div> <!--.card-->
+                    </div>
+                {% endif %}
+            </div> <!--.row-->
+    </div>
+    {% endblock main %}

@@ -1,0 +1,43 @@
+
+{% extends 'base.html'%}
+{% load static %}
+
+{% block title %} | {{ vid.course_title }}  {% endblock title %}
+
+{% block main %} 
+
+    <!-- main details -->
+    {% if vid %}
+      <main class="container">
+        <!-- Title -->
+        <div class="details-title-container">
+          <h1 class="details-title">
+            {{ vid.category }}
+          </h1>
+        </div>
+
+        <!-- details image/video -->
+        <div class="details-video">
+          <iframe width="100%" height="500"
+          src="{{ vid.video_url }}"
+          allowfullscreen frameborder="0">
+          </iframe>
+        </div>
+
+          <div class="article-form-container">
+            <!-- article = video description/blog description -->
+            <article class="article">
+              <h2 class="details-title">
+                {{ vid.title }}
+              </h2>
+              {{ vid.description }}
+            </article>
+            
+          </div>
+
+      </main>
+    {% else %}
+      No Videos related!
+    {% endif %}
+
+{% endblock main %}

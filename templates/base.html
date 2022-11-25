@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Courses {% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/skeleton.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'css/details_one.css' %}">
+</head>
+<body>
+<header id="header" class="header">
+    <div class="container">
+        <div class="row">
+            <div class="four columns">
+                <img src="{% static 'img/logo.jpg' %}" id="logo">
+            </div>
+            <div class="two columns u-pull-right">
+                <a class="link-item" href="{% url 'home_url' %}">Courses</a>
+            </div>
+        </div>
+    </div>
+    </header>
+
+    <!-- main page/body section -->
+    {% comment %} Main {% endcomment %}
+    {% block main %}  {% endblock main %}
+
+
+    <footer id="footer" class="footer">
+      <div class="container">
+        Android Course learning system
+      </div>
+  </footer>
+
+  <script src=""></script>
+
+</body>
+</html>
